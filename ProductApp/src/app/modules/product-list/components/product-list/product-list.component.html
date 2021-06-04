@@ -1,0 +1,27 @@
+<div class="product-list">
+    
+    <div class="categories">
+        <div class="category-item" *ngFor="let item of categorylist">
+            <div class="item" (click)="onSearchCategory(item)">
+                <img src={{item.image}} alt="">
+                <p>
+                    {{item.category}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-items">
+        <div *ngFor="let product of productListDummy | categoryfilter:filterName:'productcategory'">
+            <div class="card" style="width: 12rem;">
+                <img class="card-img-top" src={{product.productimage}} alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-text">{{product.productname}}</h4>
+                  <h4>Rs.{{product.productprice}}</h4>
+                  <button (click)="addtoCart(product)"><mat-icon>shopping_cart</mat-icon>Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

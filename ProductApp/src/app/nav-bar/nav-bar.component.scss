@@ -1,0 +1,48 @@
+.navbar{
+    height: 8vh;
+    background-color: rgb(15, 91, 231);
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    .leftnav{
+        margin-left:25px;
+        a{
+            font-size:15px;
+            line-height:24px;
+            color:white;
+            border: 0;
+            background-color:rgb(15, 91, 231);
+            mat-icon{
+                color:white;
+                display: inline-flex;
+                vertical-align: top;
+            }
+        }
+        a:hover{
+            text-decoration: none;
+        }
+       
+    }
+    .rightnav{
+        display: flex;
+        margin-right: 25px;
+        align-content: flex-end;
+        a{
+            font-size:15px;
+            line-height:24px;
+            margin:10px;
+            align-items: center;
+            color:white;
+            border: 0;
+            background-color:rgb(15, 91, 231);
+            mat-icon{
+                color:white;
+                display: inline-flex;
+                vertical-align: top;
+            }
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+}

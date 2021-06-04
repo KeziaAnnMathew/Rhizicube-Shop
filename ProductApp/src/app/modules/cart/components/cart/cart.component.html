@@ -1,0 +1,23 @@
+<div class="cart-list">
+    <div *ngIf="empty" class="alert alert-danger">
+        Your Cart is Empty
+    </div>
+    <div class="list-items">
+        <div *ngFor="let product of cartItems">
+            <div class="card" style="width: 12rem;">
+                <img class="card-img-top" src="{{product.productimage}}" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-text">{{product.productname}}</h4>
+                  <h4>Rs.{{product.productprice}}</h4>
+                  <button (click)="removeItem(product)"><mat-icon>delete</mat-icon>Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div  *ngIf="!empty" class="footer">
+    <div class="footer-items">
+        <p>Sub Total : Rs.{{subTotal}}</p>
+        <button>Proceed to Checkout</button>
+    </div>
+</div>
